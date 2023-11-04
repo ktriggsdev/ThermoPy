@@ -1,4 +1,4 @@
-# thermometer_app
+# ThermoPy
 A simple program that displays the current temperature in a chosen city using a thermometer display
 
 ## Changelog: 
