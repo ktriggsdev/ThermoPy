@@ -2,11 +2,11 @@
 import subprocess
 
 # import all other modules
-import tkinter as tk  # import tkinter module
-import python_weather  # import python_weather module
-import asyncio  # import asyncio module
-import os  # import os module
-import geopy  # import geopy module
+import tkinter as tk  
+import python_weather  
+import asyncio  
+import os  
+import geopy  
 
 # Get the requirements.txt file path
 requirements_file_path = "requirements.txt"
