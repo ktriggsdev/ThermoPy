@@ -46,19 +46,11 @@ entry = tk.Entry(root, font="calibri", bg="black", fg="white", highlightbackgrou
 entry.insert(0, "")
 
 label.pack()
-separator()
-separator()
-separator()
-separator()
-separator()
-separator()
+for i in range(6):
+    separator()
 entry.pack()
-separator()
-separator()
-separator()
-separator()
-separator()
-separator()
+for i in range(6):
+    separator()
 
 
 async def get_weather(city):
@@ -85,12 +77,8 @@ def submit_entry():
 submit = tk.Button(root, text="Submit", relief="raised", font="calibri", command=submit_entry)
 
 submit.pack()
-separator()
-separator()
-separator()
-separator()
-separator()
-separator()
+for i in range(6):
+    separator()
 
 
 def scale_color(weather):
@@ -112,12 +100,8 @@ scale = tk.Scale(root, length=250, from_=50, to=-40, tickinterval=15,
                  orient="vertical")
 
 scale.pack()
-separator()
-separator()
-separator()
-separator()
-separator()
-separator()
+for i in range(6):
+    separator()
 if __name__ == '__main__':
     if os.name == 'nt':
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
