@@ -1,4 +1,4 @@
-# Import pip module
+# Import subprocess module
 import subprocess
 
 # import all other modules
