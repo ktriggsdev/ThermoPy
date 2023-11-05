@@ -1,12 +1,12 @@
-# import subprocess module
+# Import subprocess module
 import subprocess
 
 # import all other modules
-import tkinter as tk  
-import python_weather  
-import asyncio  
-import os  
-import geopy  
+import tkinter as tk
+import python_weather
+import asyncio
+import os
+import geopy
 
 # Get the requirements.txt file path
 requirements_file_path = "requirements.txt"
@@ -68,8 +68,8 @@ def submit_entry():
         scale_color(weather)
     else:
         invalid_city = tk.Label(root,
-                                text="City is incorrect, please format it as, City, State if from US, else format it" +
-                                     " as City, Country", bg="black", fg="white")
+                                text="City is unrecognised, please format it as: City, State if from US, else format it" +
+                                     " as City, Country", bg="black", fg="white", wraplength=250)
         invalid_city.pack()
         invalid_city.after(5000, invalid_city.destroy)
 
@@ -84,11 +84,11 @@ for i in range(6):
 def scale_color(weather):
     if int(weather) <= 0:
         scale.config(bg="lightblue1", fg="black")
-    elif 0 < int(weather) <= 20:
+    elif 0 < int(weather) <= 11:
         scale.config(bg="blue", fg="white")
-    elif 20 < int(weather) <= 25:
+    elif 11 < int(weather) <= 15:
         scale.config(bg="yellow", fg="black")
-    elif 25 < int(weather) <= 32:
+    elif 15 < int(weather) <= 21:
         scale.config(bg="orange", fg="black")
     else:
         scale.config(bg="red", fg="white")
@@ -106,3 +106,4 @@ if __name__ == '__main__':
     if os.name == 'nt':
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     root.mainloop()
+
